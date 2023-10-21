@@ -1,1 +1,1 @@
-this is the sorting algoriths readme file 
+this is the readme file for sortin algorthms
