@@ -49,7 +49,7 @@ void quick(int *array, int init, int end, size_t size)
 
 int Lomuto_part(int *array, int init, int end, size_t size)
 {
-	int i = init - 1;
+	int i = init;
 	int j;
 	int temp;
 
@@ -57,23 +57,22 @@ int Lomuto_part(int *array, int init, int end, size_t size)
 	{
 		if (array[j] < array[end])
 		{
-			i++;
-			if (i != j)
+			if (j > i)
 			{
 				temp = array[j];
 				array[j] = array[i];
 				array[i] = temp;
 				print_array(array, size);
 			}
+			i++;
 		}
 	}
-	if (end != i + 1)
+	if (array[end] < array[i])
 	{
 		temp = array[end];
-		array[end] = array[i + 1];
-		array[i + 1] = temp;
+		array[end] = array[i];
+		array[i] = temp;
 		print_array(array, size);
-		return (i + 1);
 	}
-	return (i + 1);
+	return (i);
 }
