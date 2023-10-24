@@ -15,7 +15,8 @@ void quick_sort_hoare(int *array, size_t size)
 {
 	int init = 0;
 	int end = size - 1;
-
+	if (array == NULL || size < 2)
+		return;
 	quick(array, init, end, size);
 }
 
@@ -32,7 +33,7 @@ void quick(int *array, int init, int end, size_t size)
 {
 	int pos;
 
-	if (init >= end)
+	if (init > end)
 		return;
 	pos = Hoare_part(array, init, end, size);
 	quick(array, init, pos - 1, size);
@@ -50,17 +51,17 @@ void quick(int *array, int init, int end, size_t size)
 
 int Hoare_part(int *array, int init, int end, size_t size)
 {
-	int min = init;
+	int min = init - 1;
 	int max = end;
 	int temp;
 	int pivot = end;
 
 	while (min < max)
 	{
-		while (array[min] < array[pivot] && min < end)
+		while (array[min] < array[pivot])
 			min++;
-		while (array[max] >= array[pivot] && max < init)
-			max++;
+		while (array[max] > array[pivot])
+			max--;
 
 		if (min < max)
 		{
@@ -70,24 +71,5 @@ int Hoare_part(int *array, int init, int end, size_t size)
 			print_array(array, size);
 		}
 	}
-	if (array[pivot] > array[min])
-	{
-		temp = array[pivot];
-		array[pivot] = array[min];
-		array[min] = temp;
-		print_array(array, size);
-	}
-	return (min);
+	return (max);
 }
-
-
-
-
-
-
-
-
-
-
-
-
