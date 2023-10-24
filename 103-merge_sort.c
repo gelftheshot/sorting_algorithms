@@ -54,7 +54,7 @@ void merge_sub(int *array, int m, int init, int end)
 	int a2[1024];
 	int i, j, k;
 
-	printf("merging...\n");
+	printf("Merging...\n");
 	for (i = 0; i < len1; i++)
 	{
 		a1[i] = array[init + i];
@@ -93,7 +93,7 @@ void merge_sub(int *array, int m, int init, int end)
 			printf(", ");
 	}
 	printf("\n");
-	printf("[done]: ");
+	printf("[Done]: ");
 	for (k = init; k <= end; k++)
 	{
 		printf("%d", array[k]);
