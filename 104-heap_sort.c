@@ -1,50 +1,44 @@
 #include "sort.h"
 
 /**
- *
- *
- *
+ *hipify - convert array to heap form
+ *@array: the array to be sorted
+ *@size: size of the array
+ *@init: the init of the sub tree
+ *@end: the end of the sub tree
+ *Return: void
 */
 
-void hipify(int *array, int size, int n)
+void hipify(int *array, size_t size, size_t init, size_t end)
 {
-	int count = (size -1) / 2;
+	size_t a, b, large;
 	int temp;
-	int a;
-	int b;
 
-	while (count >= 0)
+	a = 2 * end + 1;
+	b = 2 * end + 2;
+	large = end;
+
+	if (a < init && array[a] > array[large])
+		large = a;
+	if (b < init && array[b] > array[large])
+		large = b;
+
+	if (large != end)
 	{
-		a = 2 * count + 1;
-		b = 2 * count + 2;
-		if (a == size)
-		{
-			if (array[a] > array[count])
-			{
-				temp = array[a];
-				array[a] = array[count];
-				array[count] = temp;
-				print_array(array, n);
-			}
-		}
-		if ( b <= size && (array[a] > array[b]) && (array[a] > array[count]))
-			{
-				temp = array[a];
-				array[a] = array[count];
-				array[count] = temp;
-				print_array(array, n);
-			}
-
-		if ( b <= size && (array[b] > array[a]) && (array[b] > array[count]))
-			{
-				temp = array[b];
-				array[b] = array[count];
-				array[count] = temp;
-				print_array(array, n);
-			}
-		count--;	
+		temp = array[end];
+		array[end] = array[large];
+		array[large] = temp;
+		print_array(array, size);
+		hipify(array, size, init, large);
 	}
 }
+
+/**
+ *delete_heap - delete the root of the heap
+ *@array: the heap array
+ *@size: the size of the array
+ *Return: void
+**/
 
 void delete_heap(int *array, int size)
 {
@@ -55,24 +49,28 @@ void delete_heap(int *array, int size)
 	array[size] = temp;
 }
 
+/**
+ *heap_sort - the main heap sort
+ *@array: the array to be sorted
+ *@size: the size of the array
+ *Return: void
+*/
+
 void heap_sort(int *array, size_t size)
 {
-	int count = size - 1;
-	int n = size;
-	while (count > 1)
+	int count = (size / 2) - 1;
+	size_t i = size - 1;
+
+	if (array == NULL || size < 2)
+		return;
+	for (; count >= 0; count--)
 	{
-		hipify(array, count, n);
-		delete_heap(array, count);
+		hipify(array, size, size, count);
+	}
+	for (; i > 0; i--)
+	{
+		delete_heap(array, i);
 		print_array(array, size);
-		count--;
+		hipify(array, size, i, 0);
 	}
 }
-
-
-
-
-
-
-
-
-
