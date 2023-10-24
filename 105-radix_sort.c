@@ -49,6 +49,9 @@ void digit_count_sort(int *array, int size, int digit)
 		array[count_array[(temp[i] / digit) % 10] - 1] = temp[i];
 		count_array[(temp[i] / digit) % 10]--;
 	}
+	free(count_array);
+	free(temp);
+	
 }
 
 /**
