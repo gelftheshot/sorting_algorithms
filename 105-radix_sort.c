@@ -13,7 +13,6 @@ void digit_count_sort(int *array, int size, int digit)
 
 	int n = size;
 	int i, j, m, max = 0;
-
 	int *count_array;
 	int *temp = malloc(sizeof(int) * size);
 
@@ -24,18 +23,14 @@ void digit_count_sort(int *array, int size, int digit)
 	}
 
 	count_array = malloc(sizeof(int) * (max + 1));
-
-
 	for (i = 0; i < n; i++)
 	{
 		temp[i] = array[i];
 	}
-
 	for (j = 0; j <= max; j++)
 	{
 		count_array[j] = 0;
 	}
-
 	for (i = 0; i < n; i++)
 	{
 		m = (array[i] / digit) % 10;
@@ -51,7 +46,6 @@ void digit_count_sort(int *array, int size, int digit)
 	}
 	free(count_array);
 	free(temp);
-	
 }
 
 /**
@@ -68,6 +62,8 @@ void radix_sort(int *array, size_t size)
 	int max = 0;
 	int digit;
 
+	if (array == NULL || size < 2)
+		return;
 	for (i = 0; i < n; i++)
 	{
 		if (array[i] > max)
