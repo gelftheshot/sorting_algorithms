@@ -21,6 +21,8 @@ In each subdirectory, you'll find the code implementing the algorithm, along wit
 Feel free to dive in, learn, and contribute!
 
 Bubble Sort Algorithm
+![BUBLE SORT GIF](image_representation/bubble_sort.gif)
+![BUBBLE SORT GIF 2](image_representation/bubble_sort_2.gif)
 
 this file contains a C implementation of the Bubble Sort algorithm.
 
