@@ -35,28 +35,6 @@ Here's a brief explanation of the variables used:
 - `array`: The array to be sorted.
 - `size`: The size of the array.
 
-## Usage
-
-To use this program, compile it with a C compiler and run the resulting executable. The program expects input in the form of an integer array.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## Contact
-
-Please open an issue for any questions or concerns.
-
-## Next Steps
-
-- Improve the efficiency of the sorting algorithm.
-- Add error handling for edge cases.
-- Implement user-friendly input and output methods.
-
 GitHub Copilot: # Insertion Sort List
 
 This is a C program that implements the insertion sort algorithm on a doubly linked list.
@@ -156,8 +134,64 @@ Here's a brief explanation of the variables used:
 - `array`: The array to be sorted.
 - `size`: The size of the array.
 
+GitHub Copilot: # Cocktail Sort Algorithm
+
+This repository contains a C implementation of the Cocktail Sort algorithm.
+
+## Code Overview
+
+The provided code is a function that performs cocktail sort on a doubly linked list. Cocktail Sort, also known as Bidirectional Bubble Sort, Cocktail Shaker Sort, Shaker Sort, Ripple Sort, Shuffle Sort, or Shuttle Sort, is a variation of Bubble Sort. It differs in that instead of repeatedly passing through the list from bottom to top, it passes alternately from bottom to top and then from top to bottom.
+
+Here's a brief explanation of the variables used:
+
+- `ptr`: A pointer used to traverse the list.
+- `prev`: Points to the node before the current node.
+- `prev_prev`: Points to the node before the `prev` node.
+- `next`: Points to the node after the current node.
+- `list`: The list to be sorted.
+
+The `swap_nodes` function is used to swap two nodes in the list.
+
 ## Next Steps
 
-- Enhance the efficiency of the sorting algorithm.
-- Incorporate error handling for edge cases.
-- Develop user-friendly input and output methods.
+- Improve the efficiency of the sorting algorithm.
+- Add error handling for edge cases.
+- Implement user-friendly input and output methods.
+GitHub Copilot: # Counting Sort Algorithm
+
+This repository includes a C implementation of the Counting Sort algorithm.
+
+## Overview of the Code
+
+The provided code is a function that performs counting sort on an integer array. Counting Sort is an integer sorting algorithm that sorts elements based on the count of individual elements. It is not a comparison-based sort and scales well for larger ranges of integer keys.
+
+Here's a brief explanation of the variables used:
+
+- `n`: The size of the array.
+- `i`, `j`: Loop counters.
+- `max`: The maximum element in the array.
+- `count_array`: An array to store the count of individual elements.
+- `temp`: A temporary array to store the sorted elements.
+- `array`: The array to be sorted.
+- `size`: The size of the array.
+
+The function first finds the maximum element in the array to determine the range of counts. It then allocates the `count_array` and `temp` arrays. If the allocation fails, it frees any previously allocated memory and returns.
+GitHub Copilot: # Merge Sort Algorithm
+
+This repository contains a C implementation of the Merge Sort algorithm.
+
+## Code Overview
+
+The provided code is a function that performs merge sort on an integer array. Merge Sort is an efficient, stable, comparison-based sorting algorithm most commonly used for sorting large data sets or lists. It is a divide and conquer algorithm that works by dividing the unsorted list into n sublists, each containing one element (a list of one element is considered sorted), and repeatedly merging sublists to produce new sorted sublists until there is only one sublist remaining.
+
+Here's a brief explanation of the variables used:
+
+- `array`: The array to be sorted.
+- `size`: The size of the array.
+- `n`: The size of the array, cast to an integer.
+- `init`: The starting index of the array or sub-array.
+- `end`: The ending index of the array or sub-array.
+- `m`: The middle index of the array or sub-array.
+
+The `merge_sort` function is the main function that calls the `real_merge` function, which performs the actual sorting. The `real_merge` function recursively divides the array into two halves until it can no more be divided, then merges the smaller units back into larger units while performing the sorting.
+
