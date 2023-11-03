@@ -1,6 +1,6 @@
 #Algorithmic Sorting Techniques
 
-This repository is a collection of various sorting algorithms, each implemented in different programming languages. These sorting algorithms are a cornerstone of computer science, and gaining a deep understanding of them can enhance your coding efficiency and problem-solving capabilities.
+this file is a collection of various sorting algorithms, each implemented in different programming languages. These sorting algorithms are a cornerstone of computer science, and gaining a deep understanding of them can enhance your coding efficiency and problem-solving capabilities.
 
 The repository includes the following sorting techniques:
 
@@ -20,11 +20,11 @@ In each subdirectory, you'll find the code implementing the algorithm, along wit
 
 Feel free to dive in, learn, and contribute!
 
-GitHub Copilot: # Bubble Sort Algorithm
+Bubble Sort Algorithm
 
-This repository contains a C implementation of the Bubble Sort algorithm.
+this file contains a C implementation of the Bubble Sort algorithm.
 
-## Code Overview
+0-bubble_sort.c
 
 The provided code is a function that performs bubble sort on an integer array. Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
 
@@ -35,8 +35,9 @@ Here's a brief explanation of the variables used:
 - `array`: The array to be sorted.
 - `size`: The size of the array.
 
-GitHub Copilot: # Insertion Sort List
+Insertion Sort List
 
+1-insertion_sort_list.c
 This is a C program that implements the insertion sort algorithm on a doubly linked list.
 
 ## Code Overview
@@ -51,31 +52,12 @@ Here's a brief explanation of the variables used:
 - `prev_prev`: Points to the node before the `prev` node.
 - `next`: Points to the node after the current node.
 
-## Usage
 
-To use this program, compile it with a C compiler and run the resulting executable. The program expects input in the form of a doubly linked list.
 
-## Contributing
+Selection Sort Algorithm
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## Contact
-
-Please open an issue for any questions or concerns.
-
-## Next Steps
-
-- Improve the efficiency of the sorting algorithm.
-- Add error handling for edge cases.
-- Implement user-friendly input and output methods.
-
-GitHub Copilot: # Selection Sort Algorithm
-
-This repository includes a C implementation of the Selection Sort algorithm.
+2-selection_sort.c
+this file includes a C implementation of the Selection Sort algorithm.
 
 ## Overview of the Code
 
@@ -89,15 +71,11 @@ Here's a brief explanation of the variables used:
 - `array`: The array to be sorted.
 - `size`: The size of the array.
 
-## Next Steps
 
-- Enhance the efficiency of the sorting algorithm.
-- Incorporate error handling for edge cases.
-- Develop user-friendly input and output methods.
+Quick Sort Algorithm
 
-GitHub Copilot: # Quick Sort Algorithm
-
-This repository contains a C implementation of the Quick Sort algorithm.
+3-quick_sort.c
+this file contains a C implementation of the Quick Sort algorithm.
 
 ## Code Overview
 
@@ -111,15 +89,11 @@ Here's a brief explanation of the variables used:
 
 The `quick_sort` function is the main function that calls the `quick` function, which performs the actual sorting. The `Lomuto_part` function is used to partition the array around the pivot.
 
-## Next Steps
 
-- Improve the efficiency of the sorting algorithm.
-- Add error handling for edge cases.
-- Implement user-friendly input and output methods.
+Shell Sort Algorithm
 
-GitHub Copilot: # Shell Sort Algorithm
-
-This repository includes a C implementation of the Shell Sort algorithm.
+100-shell_sort.c
+this file includes a C implementation of the Shell Sort algorithm.
 
 ## Overview of the Code
 
@@ -134,9 +108,10 @@ Here's a brief explanation of the variables used:
 - `array`: The array to be sorted.
 - `size`: The size of the array.
 
-GitHub Copilot: # Cocktail Sort Algorithm
+Cocktail Sort Algorithm
 
-This repository contains a C implementation of the Cocktail Sort algorithm.
+101-cocktail_sort_list.c
+this file contains a C implementation of the Cocktail Sort algorithm.
 
 ## Code Overview
 
@@ -152,14 +127,9 @@ Here's a brief explanation of the variables used:
 
 The `swap_nodes` function is used to swap two nodes in the list.
 
-## Next Steps
-
-- Improve the efficiency of the sorting algorithm.
-- Add error handling for edge cases.
-- Implement user-friendly input and output methods.
-GitHub Copilot: # Counting Sort Algorithm
-
-This repository includes a C implementation of the Counting Sort algorithm.
+Counting Sort Algorithm
+102-counting_sort.c
+this file includes a C implementation of the Counting Sort algorithm.
 
 ## Overview of the Code
 
@@ -176,11 +146,12 @@ Here's a brief explanation of the variables used:
 - `size`: The size of the array.
 
 The function first finds the maximum element in the array to determine the range of counts. It then allocates the `count_array` and `temp` arrays. If the allocation fails, it frees any previously allocated memory and returns.
-GitHub Copilot: # Merge Sort Algorithm
+Merge Sort Algorithm
 
-
+merge sort algorithm
 ## Code Overview
 
+103-merge_sort.c
 The provided code is a function that performs merge sort on an integer array. Merge Sort is an efficient, stable, comparison-based sorting algorithm most commonly used for sorting large data sets or lists. It is a divide and conquer algorithm that works by dividing the unsorted list into n sublists, each containing one element (a list of one element is considered sorted), and repeatedly merging sublists to produce new sorted sublists until there is only one sublist remaining.
 
 Here's a brief explanation of the variables used:
@@ -194,9 +165,10 @@ Here's a brief explanation of the variables used:
 
 The `merge_sort` function is the main function that calls the `real_merge` function, which performs the actual sorting. The `real_merge` function recursively divides the array into two halves until it can no more be divided, then merges the smaller units back into larger units while performing the sorting.
 
-GitHub Copilot: # Heap Sort Algorithm
+Heap Sort Algorithm
 
-This repository includes a C implementation of the Heap Sort algorithm.
+104-heap_sort.c
+this file includes a C implementation of the Heap Sort algorithm.
 
 ## Code Overview
 
@@ -214,9 +186,10 @@ Here's a brief explanation of the variables used:
 
 The `hipify` function is used to rearrange the array into a heap. It compares the parent node with its children and swaps them if the parent node is smaller than the child node. This process is repeated until the entire array is transformed into a heap.
 
-GitHub Copilot: # Radix Sort Algorithm
+Radix Sort Algorithm
 
-This repository contains a C implementation of the Radix Sort algorithm.
+105-radix_sort.c
+this file contains a C implementation of the Radix Sort algorithm.
 
 ## Code Overview
 
@@ -235,9 +208,9 @@ Here's a brief explanation of the variables used:
 
 The `digit_count_sort` function is used to perform counting sort on each digit. It first finds the maximum element in the array to determine the range of counts. It then allocates the `count_array` and `temp` arrays. If the allocation fails, it frees any previously allocated memory and returns.
 
-GitHub Copilot: # Bitonic Sort Algorithm
-
-This repository contains a C implementation of the Bitonic Sort algorithm.
+Bitonic Sort Algorithm
+106-bitonic_sort.c
+this file contains a C implementation of the Bitonic Sort algorithm.
 
 ## Code Overview
 
@@ -256,9 +229,9 @@ Here's a brief explanation of the variables used:
 
 The `bitonic_merge` function is used to merge two bitonic sequences. It first checks if the sequence is longer than one element. If it is, it compares each element in the first half of the sequence with the corresponding element in the second half, and swaps them if they are in the wrong order. This process is repeated recursively for both halves until the entire sequence is sorted.
 
-GitHub Copilot: # Quick Sort Hoare Partition Scheme Algorithm
-
-This repository contains a C implementation of the Quick Sort algorithm using the Hoare partition scheme.
+Quick Sort Hoare Partition Scheme Algorithm
+107-quick_sort_hoare.c
+this file contains a C implementation of the Quick Sort algorithm using the Hoare partition scheme.
 
 ## Code Overview
 
