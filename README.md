@@ -264,3 +264,14 @@ Please open an issue for any questions or concerns.
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+0-O - Bubble Sort time complexity
+1-O - Insertion Sort time complexity
+2-O - Selection Sort time complexity
+3-O - Quick Sort time complexity
+101-O - Cocktail Sort time complexity
+102-O - Counting Sort time complexity
+103-O - Merge Sort time complexity
+104-O - Heap Sort time complexity
+106-O - Bitonic Sort time complexity
+107-O - Quick Sort Hoare Partition Scheme time complexity
