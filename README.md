@@ -178,7 +178,6 @@ Here's a brief explanation of the variables used:
 The function first finds the maximum element in the array to determine the range of counts. It then allocates the `count_array` and `temp` arrays. If the allocation fails, it frees any previously allocated memory and returns.
 GitHub Copilot: # Merge Sort Algorithm
 
-This repository contains a C implementation of the Merge Sort algorithm.
 
 ## Code Overview
 
@@ -195,3 +194,100 @@ Here's a brief explanation of the variables used:
 
 The `merge_sort` function is the main function that calls the `real_merge` function, which performs the actual sorting. The `real_merge` function recursively divides the array into two halves until it can no more be divided, then merges the smaller units back into larger units while performing the sorting.
 
+GitHub Copilot: # Heap Sort Algorithm
+
+This repository includes a C implementation of the Heap Sort algorithm.
+
+## Code Overview
+
+The provided code is a function that performs heap sort on an integer array. Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure. It divides its input into a sorted and an unsorted region, and iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. The improvement from selection sort is to use a heap to speed up finding the maximum.
+
+Here's a brief explanation of the variables used:
+
+- `array`: The array to be sorted.
+- `size`: The size of the array.
+- `init`: The starting index of the array or sub-array.
+- `end`: The ending index of the array or sub-array.
+- `a`, `b`: Indices used to traverse the array.
+- `large`: Index of the largest element in the heap.
+- `temp`: A temporary variable used for swapping elements.
+
+The `hipify` function is used to rearrange the array into a heap. It compares the parent node with its children and swaps them if the parent node is smaller than the child node. This process is repeated until the entire array is transformed into a heap.
+
+GitHub Copilot: # Radix Sort Algorithm
+
+This repository contains a C implementation of the Radix Sort algorithm.
+
+## Code Overview
+
+The provided code is a function that performs radix sort on an integer array. Radix Sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value. The sorting process starts from the least significant digit and moves towards the most significant digit.
+
+Here's a brief explanation of the variables used:
+
+- `array`: The array to be sorted.
+- `size`: The size of the array.
+- `digit`: The digit position being sorted.
+- `n`: The size of the array, cast to an integer.
+- `i`, `j`, `m`: Loop counters.
+- `max`: The maximum element in the array.
+- `count_array`: An array to store the count of individual elements.
+- `temp`: A temporary array to store the sorted elements.
+
+The `digit_count_sort` function is used to perform counting sort on each digit. It first finds the maximum element in the array to determine the range of counts. It then allocates the `count_array` and `temp` arrays. If the allocation fails, it frees any previously allocated memory and returns.
+
+GitHub Copilot: # Bitonic Sort Algorithm
+
+This repository contains a C implementation of the Bitonic Sort algorithm.
+
+## Code Overview
+
+The provided code is a function that performs bitonic sort on an integer array. Bitonic Sort is a parallel, comparison-based sorting algorithm which focuses on converting a random sequence of numbers into a bitonic sequence, one that monotonically increases, then decreases. Sequences that only increase or decrease can be considered bitonic as well.
+
+Here's a brief explanation of the variables used:
+
+- `array`: The array to be sorted.
+- `size`: The size of the array.
+- `init`: The starting index of the array or sub-array.
+- `end`: The ending index of the array or sub-array.
+- `dir`: The direction of sorting, true for ascending and false for descending.
+- `mid`: The middle index of the array or sub-array.
+- `i`: Loop counter.
+- `temp`: A temporary variable used for swapping elements.
+
+The `bitonic_merge` function is used to merge two bitonic sequences. It first checks if the sequence is longer than one element. If it is, it compares each element in the first half of the sequence with the corresponding element in the second half, and swaps them if they are in the wrong order. This process is repeated recursively for both halves until the entire sequence is sorted.
+
+GitHub Copilot: # Quick Sort Hoare Partition Scheme Algorithm
+
+This repository contains a C implementation of the Quick Sort algorithm using the Hoare partition scheme.
+
+## Code Overview
+
+The provided code is a function that performs quick sort on an integer array. Quick Sort is an efficient, in-place sorting algorithm that uses the divide-and-conquer strategy. The Hoare partition scheme is an alternative to the Lomuto partition scheme and was developed by the inventor of Quick Sort, C.A.R. Hoare.
+
+Here's a brief explanation of the variables used:
+
+- `array`: The array to be sorted.
+- `size`: The size of the array.
+- `init`: The starting index of the array or sub-array.
+- `end`: The ending index of the array or sub-array.
+- `pos`: The position of the pivot element after partitioning.
+
+The `quick_sort_hoare` function is the main function that calls the `quick` function, which performs the actual sorting. The `Hoare_part` function is used to partition the array around the pivot.
+
+## Next Steps
+
+- Improve the efficiency of the sorting algorithm.
+- Add error handling for edge cases.
+- Implement user-friendly input and output methods.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact
+
+Please open an issue for any questions or concerns.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
