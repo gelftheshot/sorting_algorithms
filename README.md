@@ -116,3 +116,48 @@ Here's a brief explanation of the variables used:
 - Enhance the efficiency of the sorting algorithm.
 - Incorporate error handling for edge cases.
 - Develop user-friendly input and output methods.
+
+GitHub Copilot: # Quick Sort Algorithm
+
+This repository contains a C implementation of the Quick Sort algorithm.
+
+## Code Overview
+
+The provided code is a function that performs quick sort on an integer array. Quick sort is an efficient, in-place sorting algorithm that uses the divide-and-conquer strategy. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
+
+Here's a brief explanation of the variables used:
+
+- `init` and `end`: Indicate the start and end of the array or sub-array.
+- `array`: The array to be sorted.
+- `size`: The size of the array.
+
+The `quick_sort` function is the main function that calls the `quick` function, which performs the actual sorting. The `Lomuto_part` function is used to partition the array around the pivot.
+
+## Next Steps
+
+- Improve the efficiency of the sorting algorithm.
+- Add error handling for edge cases.
+- Implement user-friendly input and output methods.
+
+GitHub Copilot: # Shell Sort Algorithm
+
+This repository includes a C implementation of the Shell Sort algorithm.
+
+## Overview of the Code
+
+The provided code is a function that performs shell sort on an integer array. Shell Sort is a generalized version of insertion sort. It first sorts elements far apart from each other and successively reduces the interval between the elements to be compared. The interval between the elements is gradually decreased based on the sequence used. In this implementation, the sequence is calculated using the formula `h = h * 3 + 1`.
+
+Here's a brief explanation of the variables used:
+
+- `n`: The size of the array.
+- `h`: The interval or gap between the elements to be compared.
+- `i`, `j`, `k`: Loop counters.
+- `temp`: A temporary variable used for swapping elements.
+- `array`: The array to be sorted.
+- `size`: The size of the array.
+
+## Next Steps
+
+- Enhance the efficiency of the sorting algorithm.
+- Incorporate error handling for edge cases.
+- Develop user-friendly input and output methods.
